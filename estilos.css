@@ -1,0 +1,167 @@
+:root{
+    --color_principal: #9000ff;
+    --color_fondo: #211745;
+    --color_lineas:#FFFFFF;
+    --line_style: 10px solid var(--color_lineas);
+    --font-family: 'Archivo', sans-serif;
+}
+
+
+body{
+    background-color: var(--color_fondo);
+    user-select: none;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    font-family:var(--font-family);
+    color: var(--color_lineas);
+}
+
+
+#contenedor_grilla{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+}
+
+
+/*Cuadrados*/
+
+
+.cuadrado{
+    color:var(--color_principal);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.arriba{
+    border-bottom: var(--line_style);
+}
+
+.medio{
+    border-left: var(--line_style);
+    border-right: var(--line_style);
+}
+
+.abajo{
+    border-top: var(--line_style);
+}
+
+/*Ganador*/
+
+.ganador{
+    background-color:#c797ec ;
+}
+
+dialog{
+    text-align: center;
+    min-width: 20vw;
+    background-color: rgba(199, 151, 236, 0.73);
+    padding: 3rem;
+    border: none;
+    font-family: var(--font-family);
+
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(3px);
+
+}
+
+
+button{
+    text-align: center;
+    background-color: var(--color_principal);
+    padding: 1rem;
+    border: unset;
+    font-family: var(--font-family);
+    font-size: 20px;
+    color: white;
+}
+h2{
+    color:var(--color_fondo);
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 699px) {
+
+    .cuadrado{
+        color:var(--color_principal);
+        height: 150px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+        font-weight: bold;
+    }
+    
+}
+
+@media (max-width: 530px) {
+
+    .cuadrado{
+        color:var(--color_principal);
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    
+}
+
+@media (max-width: 350px) {
+
+    .cuadrado{
+        color:var(--color_principal);
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 2rem;
+        font-family:var(--font-family);
+        color: var(--color_lineas);
+    }
+
+    dialog{
+        text-align: center;
+        min-width: 5vw;
+        background-color: #c797ec;
+        padding: 1rem;
+        border: unset;
+        font-family: var(--font-family);
+    }
+    :root{
+        --line_style: 5px solid var(--color_lineas);
+    }
+
+    button{
+        text-align: center;
+        background-color: var(--color_principal);
+        padding: 1rem;
+        border: unset;
+        font-family: var(--font-family);
+        font-size: 15px;
+        color: white;
+    }
+}
