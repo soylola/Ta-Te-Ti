@@ -15,7 +15,7 @@ cuadrados.forEach((cuadrado,i) => {
         if (estadoJuego === "PAUSA"){
             return;
         }
-        cuadrado.innerText= estadoJuego==="P1" ? x : o;
+        cuadrado.innerText= estadoJuego==="P1" ? o : x;
       
         const posicionGanadora = revisarGanador();
 
